@@ -7,6 +7,17 @@ import { Loader } from "./";
 
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
+const Input = ({ placeholder, name, type, value, handleChange }) => (
+    <input 
+    placeholder={placeholder}
+    type={type}
+    step="0.0001"
+    value={value}
+    onChange={(e) => handleChange (e,name)}
+    className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism "
+
+    />
+)
 
 const Welcome = () => {
 
@@ -33,6 +44,8 @@ className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 round
                 Connect Wallet
               </p>
 </button>
+
+{/* grid */}
 <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
             <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
               Reliability
@@ -51,6 +64,8 @@ className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 round
           </div>
         </div>
 
+{/* Ethereumcard */}
+
         <div className="flex flex-col flex-a items-center justify-start w-full md:mt-0 mt-10">
 
         <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorpism">
@@ -58,12 +73,26 @@ className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 round
         <div className="flex justify-between items-start">
 
 <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
+        <SiEthereum fontSize={21} color="#fff" />
+</div>
+<BsInfoCircle fontSize={17} color="#fff" />
 
+        </div>
+        <div>
+            <p className="text-white font-light text-sm">
+                Address
+            </p>
+            <p className="text-white font-semibold text-lg mt-1">
+                Ethereum
+            </p>
+        </div>
+        </div>
+        </div>
+
+<div className="p-5 sm:w-96 w-full flext flex-col justify-start items-center blue-glassmorpishism ">
+<Input placeholder="Address To" name="addressTo" type="text" handleChange={ () => {}} />
 </div>
 
-        </div>
-        </div>
-        </div>
 
         </div>
             </div>
