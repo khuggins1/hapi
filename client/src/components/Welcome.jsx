@@ -50,6 +50,22 @@ className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 round
             </div>
           </div>
         </div>
+
+        <div className="flex flex-col flex-a items-center justify-start w-full md:mt-0 mt-10">
+
+        <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorpism">
+        <div className="flex justify-between flex-col w-full h-full">
+        <div className="flex justify-between items-start">
+
+<div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
+
+</div>
+
+        </div>
+        </div>
+        </div>
+
+        </div>
             </div>
         </div>
     );
