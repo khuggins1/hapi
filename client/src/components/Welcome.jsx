@@ -25,6 +25,10 @@ const Welcome = () => {
 
     }
 
+    const handlesubmit = () => {
+
+    }
+
     return (
         <div className="flex w-full justify-center items-center">
         <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
@@ -89,8 +93,27 @@ className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 round
         </div>
         </div>
 
+
 <div className="p-5 sm:w-96 w-full flext flex-col justify-start items-center blue-glassmorpishism ">
 <Input placeholder="Address To" name="addressTo" type="text" handleChange={ () => {}} />
+<Input placeholder="Amount (Eth)" name="amount" type="number" handleChange={ () => {}} />
+<Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={ () => {}} />
+<Input placeholder="Enter Message" name="message" type="text" handleChange={ () => {}} />
+
+<div className="h-[1px] w-full bg-gray-400 my-2 " />
+
+{true ? (
+<Loader />
+) : (
+   <button
+   type="button"
+   onClick={handlesubmit}
+   className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer"
+   >
+       Send Now
+   </button>
+)}
+
 </div>
 
 
